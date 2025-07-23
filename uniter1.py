@@ -1,0 +1,5 @@
+nome = input('Nome do Aluno. ')
+rg = input('RG do Aluno. ')
+sexo = input('Sexo do aluno. ')
+onde_mora = input('Onde mora. ')
+print (f' Nome,{nome=} RG,{rg=} Sexo,{sexo} Onde_mora,{onde_mora} ') 
