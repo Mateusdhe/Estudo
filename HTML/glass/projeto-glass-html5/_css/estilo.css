@@ -1,0 +1,121 @@
+@charset "UTF8"; /* Define a codificação do arquivo como UTF-8 */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@font-face {
+    font-family: 'FonteLogo';
+    src: url(/HTML/glass/projeto-glass-html5/_fonts/bubblegum-sans-regular.otf);
+}
+/* ---------- Estilo geral ---------- */
+body {
+    background-color: #dddddd; /* Cor de fundo da página */
+    color: rgba(0, 0, 0,1);  /* Cor do texto padrão (preto) */
+}
+
+div#interface {
+    width: 900px;
+    background-color: white;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px black;
+    padding: 10px 10px 10px 10px;
+}
+
+p {
+    text-align: justify;  /* Justifica o texto dos parágrafos */
+    text-indent: 50px;    /* Recuo na primeira linha do parágrafo */
+}
+header#cabecalho img#icone {
+    position: absolute;
+    left: 950px;
+    top: 60px;
+}
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url("/HTML/glass/projeto-glass-html5/_imagens/glass-logo-peq.jpg") no-repeat 10px 80px;
+}
+header#cabecalho {
+  font-family: 'FonteLogo', sans-serif;
+  h1 {
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    padding: 0;
+    margin-top: 0;
+  }
+}
+/* ---------- Formatação de imagens com legendas ---------- */
+figure.foto-legenda {
+    position: relative;            /* Permite posicionar o figcaption em relação à imagem */
+    border: 8px solid white;       /* Borda branca em volta da imagem */
+    box-shadow: 1px 1px 4px black; /* Sombra ao redor da imagem */
+}
+
+figure.foto-legenda img {
+    width: 100%;  /* Faz a imagem ocupar toda a largura disponível */
+    height: 100%; /* Ajusta a altura proporcional à largura */
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0;                        /* Legenda invisível por padrão */
+    position: absolute;                /* Posiciona a legenda em cima da imagem */
+    top: 0px;                          /* Começa do topo da imagem */
+    background-color: rgba(0,0,0,.4);  /* Fundo preto semitransparente */
+    color: white;                      /* Cor do texto da legenda */
+    width: 100%;                       /* Legenda cobre toda a largura da imagem */
+    height: 100%;                      /* Legenda cobre toda a altura da imagem */
+    padding: 10px;                     /* Espaçamento interno da legenda */
+    box-sizing: border-box;            /* Inclui o padding dentro do tamanho total */
+    transition: opacity 1s;            /* Animação suave de 1s quando aparece/desaparece */
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1; /* Mostra a legenda quando passa o mouse em cima */
+}
+
+/* ---------- Formatação do Menu ---------- */
+nav#menu {
+    display: block; /* Define o menu como bloco (ocupando largura toda) */
+}
+
+nav#menu ul {
+    list-style: none;          /* Remove os marcadores da lista */
+    text-transform: uppercase; /* Deixa todo o texto em maiúsculo */
+    position: absolute;        /* Permite posicionamento livre */
+    top: -20px;                /* Move o menu 20px acima */
+    left: 300px;               /* Move o menu 300px da esquerda */
+}
+
+nav#menu li {
+    display: inline-block;               /* Itens em linha, mas ainda tratados como blocos */
+    background-color: #dddddd;           /* Fundo cinza claro */
+    padding: 10px;                       /* Espaçamento interno */
+    margin: 2px;                         /* Espaçamento externo */
+    -webkit-transition: background-color 1s; /* Transição suave no Chrome/Safari */
+    -o-transition: background-color 1s;      /* Transição suave no Opera */
+    transition: background-color 1s;         /* Transição suave em outros navegadores */
+}
+
+nav#menu li:hover {
+    background-color: #606060; /* Muda a cor de fundo quando passa o mouse */
+}
+
+nav#menu h1 {
+    display: none; /* Esconde o título do menu (acessibilidade ou SEO) */
+}
+
+nav#menu a {
+    color: #000000;         /* Links pretos */
+    text-decoration: none;  /* Remove o sublinhado dos links */
+}
+
+nav#menu a:hover {
+    color: #ffffff;            /* Links ficam brancos no hover */
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
